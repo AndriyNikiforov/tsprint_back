@@ -14,6 +14,7 @@ const sequelize = new Sequelize(
     dialect: 'postgres',
     host: 'postgres',
     port: 5432,
+    logging: console.log,
     pool: {
       max: 10,
       min: 0,

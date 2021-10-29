@@ -5,15 +5,30 @@ const TestCase = require('./TestCase');
 const TestSuite = require('./TestSuite');
 const Attached = require('./Attached');
 
+/**
+ * User model relations
+ */
 User.hasMany(Token);
 User.belongsTo(TestCase);
 User.belongsTo(TestRun);
+
+/**
+ * TestCase model relations
+ */
 TestCase.hasOne(User);
+TestCase.hasOne(TestSuite);
+
+/**
+ * TestRun model relations
+ */
 TestRun.hasOne(User);
 TestRun.belongsTo(TestSuite);
+
+/**
+ * TesSuite model relations
+ */
 TestSuite.hasOne(TestRun);
 TestSuite.belongsTo(TestCase);
-TestCase.hasOne(TestSuite);
 
 module.exports = {
   User,
