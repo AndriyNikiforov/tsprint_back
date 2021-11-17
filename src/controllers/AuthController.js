@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-const AuthService = require('../services/authService');
+const AuthService = require('../services/AuthService');
 const SignUpValidator = require('../validators/SignUpValidator');
 const SignInValidator = require('../validators/SignInValidator');
 
